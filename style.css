@@ -200,8 +200,8 @@ nav ul li a:hover::after{
     
 }
 .work iframe{
-    height: 350px;
-    width: 400px;
+    height: 450px;
+    width: 330px;
 }
 .work a{
     text-decoration: none;
@@ -287,7 +287,7 @@ form .btn2{
 nav .fa-solid{
     display: none;
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 390px){
     #header{
         background-image: none;
     }
