@@ -172,7 +172,7 @@
         <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i>razmsi28@gmail.com</p>
+                <p><i class="fa-solid fa-paper-plane"></i>mhdrashid142@gmail.com</p>
                 <p><i class="fa-solid fa-square-phone"></i>8075764747</p>
                 <div class="social-icons">
                     <a href="https://wa.me/918075764747"><i class="fa-brands fa-whatsapp"></i></a>
@@ -181,10 +181,10 @@
                 </div>
             </div>
             <div class="contact-right">
-                 <form >
-                    <input type="text" name="Name" placeholder="Your Name" required>
+                 <form name="contact-us">
+                    <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                    <textarea name="message"  rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                  </form>
             </div>
@@ -195,6 +195,21 @@
     </div>
 </div>
 
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxfm_GTD0EKP_cn4DdFOvk9IZ8PT9iAhvgl_ERJP6MHcmaGeZxYX8Sdt4UhHsJFqnl9Ng/exec'
+    const form = document.forms['contact-us']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+            form.reset()
+            alert('Success!', response)
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
      
     <script>
@@ -215,8 +230,6 @@
     </script>
 
     <script>
-        
-
         var sidemenu = document.getElementById("sidemenu");
 
         function openmenu(){
